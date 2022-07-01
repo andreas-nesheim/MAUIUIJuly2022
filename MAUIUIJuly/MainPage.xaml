@@ -28,31 +28,76 @@
                 <Label Text="🔍" VerticalOptions="Center" />
             </FlexLayout>
 
-            <Image
-                HeightRequest="200"
-                HorizontalOptions="Center"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                Source="leclerc.jpg" />
+            <Grid>
+                <Image
+                    HeightRequest="220"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                    Source="leclerc.jpg" />
+                <Frame
+                    BorderColor="#15151d"
+                    CornerRadius="0"
+                    HeightRequest="220">
+                    <Frame.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Offset="0.1" Color="Transparent" />
+                            <GradientStop Offset="1.0" Color="#15151d" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                </Frame>
+            </Grid>
 
             <Label
-                FontSize="32"
-                HorizontalOptions="Center"
+                Margin="20,0"
+                FontSize="20"
+                HorizontalOptions="Start"
                 SemanticProperties.HeadingLevel="Level1"
-                Text="Hellos, World!" />
+                Text="2022 British GP - Practice 2" />
 
-            <Label
-                FontSize="18"
-                HorizontalOptions="Center"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                SemanticProperties.HeadingLevel="Level2"
-                Text="Welcome to .NET Multi-platform App UI" />
+            <HorizontalStackLayout Margin="20,10">
+                <Label Text="🕝" />
+                <Label Text="01:12:24 | " />
+                <Label Text=" REPLAY | " />
+                <Label Text=" 🚔 | " />
+                <Label Text=" F1 | " />
+                <Label Text=" F1 TV Pro" />
+            </HorizontalStackLayout>
 
-            <Button
-                x:Name="CounterBtn"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Text="Click me" />
+            <!--  IndicatorView  -->
+
+            <FlexLayout Margin="20,0" JustifyContent="SpaceBetween">
+                <HorizontalStackLayout>
+                    <Label
+                        FontSize="18"
+                        HorizontalOptions="Start"
+                        SemanticProperties.HeadingLevel="Level1"
+                        Text="2022 British Grand Prix" />
+                    <Label
+                        Margin="10,0"
+                        FontSize="18"
+                        SemanticProperties.HeadingLevel="Level1"
+                        Text="&gt;"
+                        TextColor="Red" />
+
+                </HorizontalStackLayout>
+                <Label
+                    Margin="0,0"
+                    FontSize="18"
+                    HorizontalOptions="EndAndExpand"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="View All" />
+            </FlexLayout>
+
+            <Border
+                Background="#1f1f27"
+                HeightRequest="180"
+                WidthRequest="180">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="0,0,15,15" />
+                </Border.StrokeShape>
+                <Label Text="hei" />
+            </Border>
+
 
         </VerticalStackLayout>
     </ScrollView>
