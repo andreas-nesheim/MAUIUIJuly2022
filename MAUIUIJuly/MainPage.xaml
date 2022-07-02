@@ -102,7 +102,7 @@
                     VerticalOptions="End" />
             </Grid>
 
-            <HorizontalStackLayout Margin="20,10">
+            <HorizontalStackLayout Margin="20,10,20,20">
                 <Label Text="🕝" />
                 <Label Text="01:12:24 | " />
                 <Label Text=" REPLAY | " />
@@ -111,9 +111,14 @@
                 <Label Text=" F1 TV Pro" />
             </HorizontalStackLayout>
 
-            <!--  IndicatorView  -->
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="4">
+                <Line Stroke="White" X2="30" />
+                <Line Stroke="#949398" X2="30" />
+                <Line Stroke="#949398" X2="30" />
+                <Line Stroke="#949398" X2="30" />
+            </HorizontalStackLayout>
 
-            <FlexLayout Margin="20,0" JustifyContent="SpaceBetween">
+            <FlexLayout Margin="20,10,20,0" JustifyContent="SpaceBetween">
                 <HorizontalStackLayout>
                     <Label
                         FontAttributes="Bold"
@@ -207,7 +212,7 @@
             </CollectionView>
 
             <Grid Margin="0,20,0,0">
-                <Image Source="redoutline_transparent.png" />
+                <Image Source="redoutline.png" />
                 <VerticalStackLayout Margin="20,30,0,0">
                     <Label FontSize="26" Text="🇬🇧" />
                     <Label
