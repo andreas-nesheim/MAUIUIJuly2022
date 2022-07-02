@@ -32,7 +32,6 @@
                 <Image
                     HeightRequest="220"
                     HorizontalOptions="Center"
-                    SemanticProperties.Description="Cute dot net bot waving hi to you!"
                     Source="leclerc.jpg" />
                 <Frame
                     BorderColor="#15151d"
@@ -45,14 +44,31 @@
                         </LinearGradientBrush>
                     </Frame.Background>
                 </Frame>
+                <Border
+                    Margin="20,30"
+                    Padding="0"
+                    Background="#e10600"
+                    HeightRequest="70"
+                    HorizontalOptions="Start"
+                    StrokeThickness="0"
+                    VerticalOptions="End"
+                    WidthRequest="70">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="0,30,0,0" />
+                    </Border.StrokeShape>
+                    <Label
+                        FontSize="20"
+                        HorizontalOptions="Center"
+                        Text="▶️"
+                        VerticalOptions="Center" />
+                </Border>
+                <Label
+                    Margin="20,0"
+                    FontSize="20"
+                    HorizontalOptions="Start"
+                    Text="2022 British GP - Practice 2"
+                    VerticalOptions="End" />
             </Grid>
-
-            <Label
-                Margin="20,0"
-                FontSize="20"
-                HorizontalOptions="Start"
-                SemanticProperties.HeadingLevel="Level1"
-                Text="2022 British GP - Practice 2" />
 
             <HorizontalStackLayout Margin="20,10">
                 <Label Text="🕝" />
@@ -70,12 +86,10 @@
                     <Label
                         FontSize="18"
                         HorizontalOptions="Start"
-                        SemanticProperties.HeadingLevel="Level1"
                         Text="2022 British Grand Prix" />
                     <Label
                         Margin="10,0"
                         FontSize="18"
-                        SemanticProperties.HeadingLevel="Level1"
                         Text="&gt;"
                         TextColor="Red" />
 
@@ -84,18 +98,48 @@
                     Margin="0,0"
                     FontSize="18"
                     HorizontalOptions="EndAndExpand"
-                    SemanticProperties.HeadingLevel="Level1"
                     Text="View All" />
             </FlexLayout>
 
             <Border
                 Background="#1f1f27"
-                HeightRequest="180"
+                HeightRequest="200"
+                StrokeThickness="0"
                 WidthRequest="180">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="0,0,15,15" />
                 </Border.StrokeShape>
-                <Label Text="hei" />
+                <Grid RowDefinitions="*,*">
+                    <Grid>
+                        <Image
+                            HeightRequest="110"
+                            HorizontalOptions="Center"
+                            Source="leclerc.jpg" />
+                        <Border
+                            Padding="0"
+                            Background="#1f1f27"
+                            HeightRequest="50"
+                            HorizontalOptions="Start"
+                            StrokeThickness="0"
+                            VerticalOptions="End"
+                            WidthRequest="50">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="0,20,0,0" />
+                            </Border.StrokeShape>
+                            <Label
+                                FontSize="20"
+                                HorizontalOptions="Center"
+                                Text="▶️"
+                                VerticalOptions="Center" />
+                        </Border>
+                    </Grid>
+
+                    <VerticalStackLayout Grid.Row="1" Margin="10">
+                        <Label Margin="0,0,0,6" Text="00:10:22" />
+                        <Label Text="PRACTICE 2 HIGHLIGHTS - Great Britain" />
+                    </VerticalStackLayout>
+
+                </Grid>
             </Border>
 
 
