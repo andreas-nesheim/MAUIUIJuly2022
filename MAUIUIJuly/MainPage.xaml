@@ -206,60 +206,34 @@
 
             </CollectionView>
 
-            <!--  Item template  -->
-            <!--<Border
-                Background="#1f1f27"
-                HeightRequest="200"
-                StrokeThickness="0"
-                WidthRequest="180">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="0,0,15,15" />
-                </Border.StrokeShape>
-                <Grid RowDefinitions="*,*">
-                    <Grid>
-                        <Image
-                            Margin="0"
-                            HeightRequest="110"
-                            HorizontalOptions="Center"
-                            Source="leclerc.jpg" />
-                        <Border
-                            Margin="-3,0,0,-2"
-                            Padding="0"
-                            Background="#1f1f27"
-                            HeightRequest="50"
-                            HorizontalOptions="Start"
-                            StrokeThickness="0"
-                            VerticalOptions="End"
-                            WidthRequest="50">
-                            <Border.StrokeShape>
-                                <RoundRectangle CornerRadius="0,20,0,0" />
-                            </Border.StrokeShape>
-                            <Image
-                                HeightRequest="38"
-                                VerticalOptions="Center"
-                                WidthRequest="38">
-                                <Image.Source>
-                                    <FontImageSource
-                                        FontFamily="IconFontTypes"
-                                        Glyph="{x:Static helpers:IconFont.PlayOutline}"
-                                        Size="38"
-                                        Color="White" />
-                                </Image.Source>
-                            </Image>
-                        </Border>
-                    </Grid>
+            <Grid Margin="0,20,0,0">
+                <Image Source="redoutline_transparent.png" />
+                <VerticalStackLayout Margin="20,30,0,0">
+                    <Label FontSize="26" Text="🇬🇧" />
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="22"
+                        Text="GREAT BRITAIN" />
+                    <Label Text="FORMULA 1 LENOVO BRITISH" />
+                    <Label Text="GRAND PRIX 2022" />
 
-                    <VerticalStackLayout Grid.Row="1" Margin="10">
-                        <Label Margin="0,0,0,6" Text="00:10:22" />
-                        <Label Text="PRACTICE 2 HIGHLIGHTS - Great Britain" />
-                        <Label
-                            HorizontalOptions="End"
-                            Text="F1"
-                            TextColor="#e10600" />
-                    </VerticalStackLayout>
+                    <Border
+                        Margin="0,20,0,0"
+                        Padding="4"
+                        Background="#38393e"
+                        HeightRequest="30"
+                        HorizontalOptions="Start"
+                        StrokeThickness="0"
+                        VerticalOptions="End"
+                        WidthRequest="110">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="15,15,15,15" />
+                        </Border.StrokeShape>
+                        <Label HorizontalOptions="Center" Text="1 JUL - 3 JUL" />
 
-                </Grid>
-            </Border>-->
+                    </Border>
+                </VerticalStackLayout>
+            </Grid>
 
         </VerticalStackLayout>
     </ScrollView>
