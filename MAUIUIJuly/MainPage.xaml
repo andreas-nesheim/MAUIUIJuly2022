@@ -22,6 +22,7 @@
                 JustifyContent="SpaceBetween"
                 VerticalOptions="CenterAndExpand">
                 <Image
+                    Margin="0,10,0,0"
                     HeightRequest="32"
                     VerticalOptions="Center"
                     WidthRequest="32">
@@ -39,6 +40,7 @@
                     Text="F1TV"
                     VerticalOptions="Center" />
                 <Image
+                    Margin="0,10,0,0"
                     HeightRequest="32"
                     VerticalOptions="Center"
                     WidthRequest="32">
@@ -103,10 +105,35 @@
             </Grid>
 
             <HorizontalStackLayout Margin="20,10,20,20">
-                <Label Text="🕝" />
+                <Image
+                    Margin="0,0,10,0"
+                    HeightRequest="20"
+                    VerticalOptions="Center"
+                    WidthRequest="20">
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="IconFontTypes"
+                            Glyph="{x:Static helpers:IconFont.ClockOutline}"
+                            Size="20"
+                            Color="White" />
+                    </Image.Source>
+                </Image>
                 <Label Text="01:12:24 | " />
                 <Label Text=" REPLAY | " />
-                <Label Text=" 🚔 | " />
+                <Image
+                    Margin="6,0,6,0"
+                    HeightRequest="20"
+                    VerticalOptions="Center"
+                    WidthRequest="20">
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="IconFontTypes"
+                            Glyph="{x:Static helpers:IconFont.Steering}"
+                            Size="20"
+                            Color="White" />
+                    </Image.Source>
+                </Image>
+                <Label Text=" | " />
                 <Label Text=" F1 | " />
                 <Label Text=" F1 TV Pro" />
             </HorizontalStackLayout>
