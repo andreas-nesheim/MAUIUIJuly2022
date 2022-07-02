@@ -3,6 +3,7 @@
     x:Class="MAUIUIJuly.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:helpers="clr-namespace:MAUIUIJuly.Helpers"
     BackgroundColor="#15151d">
     <ContentPage.Resources>
         <Style TargetType="Label">
@@ -20,12 +21,35 @@
                 HorizontalOptions="CenterAndExpand"
                 JustifyContent="SpaceBetween"
                 VerticalOptions="CenterAndExpand">
-                <Label Text="🍔" VerticalOptions="Center" />
+                <Image
+                    HeightRequest="32"
+                    VerticalOptions="Center"
+                    WidthRequest="32">
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="IconFontTypes"
+                            Glyph="{x:Static helpers:IconFont.Menu}"
+                            Size="32"
+                            Color="White" />
+                    </Image.Source>
+                </Image>
                 <Label
+                    FontAttributes="Bold"
                     FontSize="22"
                     Text="F1TV"
                     VerticalOptions="Center" />
-                <Label Text="🔍" VerticalOptions="Center" />
+                <Image
+                    HeightRequest="32"
+                    VerticalOptions="Center"
+                    WidthRequest="32">
+                    <Image.Source>
+                        <FontImageSource
+                            FontFamily="IconFontTypes"
+                            Glyph="{x:Static helpers:IconFont.Magnify}"
+                            Size="32"
+                            Color="White" />
+                    </Image.Source>
+                </Image>
             </FlexLayout>
 
             <Grid>
@@ -56,14 +80,22 @@
                     <Border.StrokeShape>
                         <RoundRectangle CornerRadius="0,30,0,0" />
                     </Border.StrokeShape>
-                    <Label
-                        FontSize="20"
-                        HorizontalOptions="Center"
-                        Text="▶️"
-                        VerticalOptions="Center" />
+                    <Image
+                        HeightRequest="50"
+                        VerticalOptions="Center"
+                        WidthRequest="50">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="IconFontTypes"
+                                Glyph="{x:Static helpers:IconFont.PlayOutline}"
+                                Size="50"
+                                Color="White" />
+                        </Image.Source>
+                    </Image>
                 </Border>
                 <Label
                     Margin="20,0"
+                    FontAttributes="Bold"
                     FontSize="20"
                     HorizontalOptions="Start"
                     Text="2022 British GP - Practice 2"
@@ -84,24 +116,98 @@
             <FlexLayout Margin="20,0" JustifyContent="SpaceBetween">
                 <HorizontalStackLayout>
                     <Label
+                        FontAttributes="Bold"
                         FontSize="18"
                         HorizontalOptions="Start"
                         Text="2022 British Grand Prix" />
                     <Label
                         Margin="10,0"
+                        FontAttributes="Bold"
                         FontSize="18"
                         Text="&gt;"
-                        TextColor="Red" />
+                        TextColor="#e10600" />
 
                 </HorizontalStackLayout>
                 <Label
                     Margin="0,0"
+                    FontAttributes="Bold"
                     FontSize="18"
                     HorizontalOptions="EndAndExpand"
                     Text="View All" />
             </FlexLayout>
 
-            <Border
+            <CollectionView ItemsLayout="HorizontalList">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border
+                            Margin="10,10,0,0"
+                            Background="#1f1f27"
+                            HeightRequest="200"
+                            StrokeThickness="0"
+                            WidthRequest="180">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="0,0,15,15" />
+                            </Border.StrokeShape>
+                            <Grid RowDefinitions="*,*">
+                                <Grid>
+                                    <Image
+                                        Margin="0"
+                                        HeightRequest="110"
+                                        HorizontalOptions="Center"
+                                        Source="leclerc.jpg" />
+                                    <Border
+                                        Margin="-3,0,0,-2"
+                                        Padding="0"
+                                        Background="#1f1f27"
+                                        HeightRequest="50"
+                                        HorizontalOptions="Start"
+                                        StrokeThickness="0"
+                                        VerticalOptions="End"
+                                        WidthRequest="50">
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="0,20,0,0" />
+                                        </Border.StrokeShape>
+                                        <Image
+                                            HeightRequest="38"
+                                            VerticalOptions="Center"
+                                            WidthRequest="38">
+                                            <Image.Source>
+                                                <FontImageSource
+                                                    FontFamily="IconFontTypes"
+                                                    Glyph="{x:Static helpers:IconFont.PlayOutline}"
+                                                    Size="38"
+                                                    Color="White" />
+                                            </Image.Source>
+                                        </Image>
+                                    </Border>
+                                </Grid>
+
+                                <VerticalStackLayout Grid.Row="1" Margin="10">
+                                    <Label Margin="0,0,0,6" Text="00:10:22" />
+                                    <Label Text="PRACTICE 2 HIGHLIGHTS - Great Britain" />
+                                    <Label
+                                        HorizontalOptions="End"
+                                        Text="F1"
+                                        TextColor="#e10600" />
+                                </VerticalStackLayout>
+
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+                <CollectionView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>test</x:String>
+                        <x:String>test</x:String>
+                        <x:String>test</x:String>
+                    </x:Array>
+                </CollectionView.ItemsSource>
+
+            </CollectionView>
+
+            <!--  Item template  -->
+            <!--<Border
                 Background="#1f1f27"
                 HeightRequest="200"
                 StrokeThickness="0"
@@ -112,10 +218,12 @@
                 <Grid RowDefinitions="*,*">
                     <Grid>
                         <Image
+                            Margin="0"
                             HeightRequest="110"
                             HorizontalOptions="Center"
                             Source="leclerc.jpg" />
                         <Border
+                            Margin="-3,0,0,-2"
                             Padding="0"
                             Background="#1f1f27"
                             HeightRequest="50"
@@ -126,22 +234,32 @@
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="0,20,0,0" />
                             </Border.StrokeShape>
-                            <Label
-                                FontSize="20"
-                                HorizontalOptions="Center"
-                                Text="▶️"
-                                VerticalOptions="Center" />
+                            <Image
+                                HeightRequest="38"
+                                VerticalOptions="Center"
+                                WidthRequest="38">
+                                <Image.Source>
+                                    <FontImageSource
+                                        FontFamily="IconFontTypes"
+                                        Glyph="{x:Static helpers:IconFont.PlayOutline}"
+                                        Size="38"
+                                        Color="White" />
+                                </Image.Source>
+                            </Image>
                         </Border>
                     </Grid>
 
                     <VerticalStackLayout Grid.Row="1" Margin="10">
                         <Label Margin="0,0,0,6" Text="00:10:22" />
                         <Label Text="PRACTICE 2 HIGHLIGHTS - Great Britain" />
+                        <Label
+                            HorizontalOptions="End"
+                            Text="F1"
+                            TextColor="#e10600" />
                     </VerticalStackLayout>
 
                 </Grid>
-            </Border>
-
+            </Border>-->
 
         </VerticalStackLayout>
     </ScrollView>
