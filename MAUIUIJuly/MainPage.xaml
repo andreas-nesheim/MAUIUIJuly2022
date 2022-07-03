@@ -158,7 +158,6 @@
                         FontSize="18"
                         Text="&gt;"
                         TextColor="#e10600" />
-
                 </HorizontalStackLayout>
                 <Label
                     Margin="0,0"
@@ -248,7 +247,6 @@
                         Text="GREAT BRITAIN" />
                     <Label Text="FORMULA 1 LENOVO BRITISH" />
                     <Label Text="GRAND PRIX 2022" />
-
                     <Border
                         Margin="0,20,0,0"
                         Padding="4"
@@ -262,7 +260,6 @@
                             <RoundRectangle CornerRadius="15,15,15,15" />
                         </Border.StrokeShape>
                         <Label HorizontalOptions="Center" Text="1 JUL - 3 JUL" />
-
                     </Border>
                 </VerticalStackLayout>
             </Grid>
